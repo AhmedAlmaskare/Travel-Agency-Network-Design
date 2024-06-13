@@ -27,7 +27,7 @@ The network consists of two distribution layer switches (DLS1 and DLS2) and two 
 * Security enhancements including SSH setup, port security, and access control lists (ACLs) to regulate network access and enhance security.
 * Routing and redundancy configurations using EIGRP and HSRP to ensure network reliability and fault tolerance.
 ## Project Outcomes
-The configured network meets the requirements set out in the CCNP SWITCH project providing a resilient and secure network environment for the International Travel Agency. This project demonstrates the application of advanced networking principles and Cisco configurations in a real-world scenario.
+The configured network meets the requirements set out in the CCNP SWITCH project providing a resilient and secure network environment for the International Travel Agency. This project demonstrates the application of advanced networking principles and Cisco configurations in a real-world cisco lab.
 ## Conclusion
 This repository serves as a comprehensive guide and reference for setting up a switched network tailored to specific operational needs, showcasing skills in network design, configuration, and troubleshooting.
 Contact Information
