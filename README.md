@@ -1,6 +1,6 @@
 # International Travel Agency Network Implementation
 ## Project Overview
-This repository contains the configurations and supporting documents for the CCNP SWITCH practice skills exam, focused on designing and implementing a switched network for the International Travel Agency. The project aims to establish a robust, scalable, and secure network using Cisco technologies, following specific requirements outlined in this project.
+This repository contains the configurations and supporting documents for the CCNP SWITCH project, focused on designing and implementing a switched network for the International Travel Agency. The project aims to establish a robust, scalable, and secure network using Cisco technologies, following specific requirements outlined in this project.
 ## Network Topology
 The network consists of two distribution layer switches (DLS1 and DLS2) and two access layer switches (ALS1 and ALS2). A topology diagram is included in the repository to provide a visual understanding of the network structure.
 ## Technologies Used
@@ -14,10 +14,10 @@ The network consists of two distribution layer switches (DLS1 and DLS2) and two 
 ## Files Included
 * Topology_Diagram.pdf: Network topology diagram illustrating the connection and configuration of switches.
 * Switch_Configurations/: Folder containing the configuration files for each switch.
-* DLS1_config.txt
-* DLS2_config.txt
-* ALS1_config.txt
-* ALS2_config.txt
+** DLS1_config.txt
+** DLS2_config.txt
+** ALS1_config.txt
+** ALS2_config.txt
 * Verification_Screenshots/: Folder with screenshots demonstrating the successful application and operation of configurations.
 * Implementation_Instructions.txt: Detailed instructions followed for configuring the network as per the requirements.
 ## Configuration Highlights
@@ -30,4 +30,4 @@ The configured network meets the requirements set out in the CCNP SWITCH project
 ## Conclusion
 This repository serves as a comprehensive guide and reference for setting up a switched network tailored to specific operational needs, showcasing skills in network design, configuration, and troubleshooting.
 Contact Information
-For any inquiries or further information regarding the network setup and configurations, please contact Eng.AhmedAlmaskari@gmail.com
+For any inquiries or further information regarding the network setup and configurations, please contact me via Eng.AhmedAlmaskari@gmail.com
