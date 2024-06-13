@@ -13,11 +13,12 @@ The network consists of two distribution layer switches (DLS1 and DLS2) and two 
 •	Various security features such as DHCP snooping, PortFast, BPDUguard, and UDLD
 ## Files Included
 * Topology_Diagram.pdf: Network topology diagram illustrating the connection and configuration of switches.
-* Switch_Configurations/: Folder containing the configuration files for each switch.
+* Switch_Configurations/: Folder containing the configuration files for each switch and router: 
  * DLS1_config.txt
  * DLS2_config.txt
  * ALS1_config.txt
  * ALS2_config.txt
+ * Router_config.txt
 * Verification_Screenshots/: Folder with screenshots demonstrating the successful application and operation of configurations.
 * Implementation_Instructions.txt: Detailed instructions followed for configuring the network as per the requirements.
 ## Configuration Highlights
@@ -31,3 +32,11 @@ The configured network meets the requirements set out in the CCNP SWITCH project
 This repository serves as a comprehensive guide and reference for setting up a switched network tailored to specific operational needs, showcasing skills in network design, configuration, and troubleshooting.
 Contact Information
 For any inquiries or further information regarding the network setup and configurations, please contact me via Eng.AhmedAlmaskari@gmail.com
+
+* Main item 1
+  * Sub-item 1a
+  * Sub-item 1b
+* Main item 2
+  * Sub-item 2a
+  * Sub-item 2b
+
