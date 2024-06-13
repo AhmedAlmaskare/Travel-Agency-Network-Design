@@ -14,10 +14,10 @@ The network consists of two distribution layer switches (DLS1 and DLS2) and two 
 ## Files Included
 * Topology_Diagram.pdf: Network topology diagram illustrating the connection and configuration of switches.
 * Switch_Configurations/: Folder containing the configuration files for each switch.
-- DLS1_config.txt
-- DLS2_config.txt
-- ALS1_config.txt
-- ALS2_config.txt
+* DLS1_config.txt
+* DLS2_config.txt
+* ALS1_config.txt
+* ALS2_config.txt
 * Verification_Screenshots/: Folder with screenshots demonstrating the successful application and operation of configurations.
 * Implementation_Instructions.txt: Detailed instructions followed for configuring the network as per the requirements.
 ## Configuration Highlights
