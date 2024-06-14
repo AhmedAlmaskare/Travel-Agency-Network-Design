@@ -1,0 +1,183 @@
+int range g1/0/5-6
+shut
+no switchport
+channel-group 10 mode active
+no shut
+exit
+
+int port-channel 10
+ip address 172.16.200.1 255.255.255.252
+no shut
+
+int range g1/0/1-4
+switchport trunk encapsulation dot1q
+switchport trunk native vlan 800
+switchport mode trunk
+switchport nonegotiate
+no shutdown
+
+int range g1/0/1-2
+channel-group 1 mode desirable 
+no shut
+
+int range g1/0/3-4
+channel-group 3 mode on
+no shut
+
+
+vlan 10
+name Staff
+vlan 20
+name Students
+vlan 100
+name Management
+vlan 110
+name Voice
+vlan 800
+name Native
+vlan 999
+name Parking
+state suspend
+
+vtp domain CISCO
+vtp version 3
+vtp mode transparent mst
+end
+
+int g1/0/7
+no shut
+switchport host
+switchport mode access 
+switchport access vlan 100
+
+interface range g1/0/8- 10
+switchport host
+udld port aggressive
+switchport mode access
+switchport access vlan 999
+shutdown
+
+interface range g1/0/12- 24
+switchport host
+udld port aggressive
+switchport mode access
+switchport access vlan 999
+shutdown
+interface range g1/1/1-4
+switchport host
+udld port aggressive
+switchport mode access
+switchport access vlan 999
+shutdown
+
+
+spanning-tree mode mst
+exit
+clear spanning-tree detected-protocols
+
+conf t
+spanning-tree mst configuration
+name CASE_STUDY
+revision 1
+instance 1 vlan 10,20
+instance 2 vlan 100,110
+exit
+conf t
+spanning-tree mst 0-1 root primary
+spanning-tree mst 2 root secondary
+
+int vlan 10
+ip address 172.16.10.2 255.255.255.0
+no shut
+int vlan 20
+ip address 172.16.20.2 255.255.255.0
+no shut
+int vlan 110
+ip address 172.16.110.2 255.255.255.0
+no shut
+ip routing 
+
+int vlan 10
+standby version 2
+standby 1 ip 172.16.10.1
+standby 1 preempt
+standby 1 priority 110
+
+
+int vlan 20
+standby version 2
+standby 1 ip 172.16.20.1
+standby 1 preempt
+standby 1 priority 110
+
+
+int vlan 100
+standby version 2
+standby 2 ip 172.16.100.1
+standby 2 preempt
+
+int vlan 110 
+standby version 2
+standby 2 ip 172.16.110.1
+standby 2 preempt
+end
+
+ip sla 10
+icmp-echo 192.168.0.2
+frequency 30
+ip sla schedule 10 life forever start-time now 
+track 100 ip sla 10
+exit
+
+int vlan 10
+standby 1 track 100 decrement 20
+int vlan 20
+standby 1 track 100 decrement 20
+exit
+
+ip dhcp relay information trust-all
+ip route 0.0.0.0 0.0.0.0 192.168.0.1
+
+vlan 150
+name Server_Farm
+exit
+
+interface vlan 150
+ip address 172.16.150.3 255.255.255.0
+standby 150 ip 172.16.150.1
+standby 150 preempt
+exit
+
+clock set 08:40:00 16 May 2022
+config t
+clock timezone AEST +10
+ntp master 10
+
+ip access-list extended student-vlan
+deny ip 172.16.10.0 0.0.0.255 172.16.20.0 0.0.0.255
+permit ip any any
+exit
+
+int vlan 10
+ip access-group student-vlan in
+exit
+
+
+ip access-list extended staff-vlan 
+deny ip 172.16.20.0 0.0.0.255 172.16.10.0 0.0.0.255
+permit ip any any
+exit
+
+int vlan 20
+ip access-group staff-vlan in
+exit
+
+
+
+
+
+
+
+
+
+

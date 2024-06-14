@@ -1,0 +1,13 @@
+hostname DHCP
+ip dhcp excluded-address 172.16.10.1 172.16.10.3
+ip dhcp excluded-address 172.16.10.150 
+ip dhcp excluded-address 172.16.20.1 172.16.10.3
+ip dhcp pool VLAN10_DHCP
+network 172.16.10.0 255.255.255.0
+default-router 172.16.10.1
+exit
+
+ip dhcp pool VLAN20_DHCP
+network 172.16.20.0 255.255.255.0
+default-router 172.16.20.1
+exit
