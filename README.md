@@ -19,6 +19,7 @@ The network consists of two distribution layer switches (DLS1 and DLS2) and two 
   * ALS1_config.txt
   * ALS2_config.txt
   * Router_config.txt
+  * DHCP_Server.txt
 * Verification_Screenshots/: Folder with screenshots demonstrating the successful application and operation of configurations.
 * Implementation_Instructions.txt: Detailed instructions followed for configuring the network as per the requirements.
 ## Configuration Highlights
